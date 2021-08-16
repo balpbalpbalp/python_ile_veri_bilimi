@@ -113,3 +113,105 @@ print(True + True)
 print(True + False)
 print(True * False)
 
+print("birinci " "ikinci " "üçüncü ")
+
+il = "İzmir"
+print(il[0])
+print(il[1])
+print(il[2])
+print(il[3])
+print(il[4])
+
+print("Python " + "öğreniyorum" + "!")
+
+x = 12345
+print(type(x))
+y = str(x)
+print(y)
+print(type(y))
+
+print("""Python'da metinler
+... birden fazla satıra
+... yazılabilir.
+""")
+print("Python'da metinler\nbirden fazla satıra\nyazılabilir.")
+
+metin = "Python \t ile \t Programla"
+print(metin)
+
+dir = r"C:\users\balp\Desktop" # r = Raw Text
+print(dir)
+
+name = "Guido "
+surname = "Van Rossum"
+name_surname = name + surname
+print(name_surname)
+
+dil = "Python"
+dil_3 = dil * 3
+print(dil_3)
+
+isim = "baran alp narinoğlu"
+isim = isim.title()
+print(isim)
+
+isim = isim.capitalize()
+print(isim)
+
+isim = isim.upper()
+print(isim)
+
+isim = isim.lower()
+print(isim)
+
+text = "    I am learning Python.   "
+print(text)
+text = text.rstrip()
+print(text)
+text = text.lstrip()
+print(text)
+text = text.strip()
+print(text)
+
+text = "I am learning Python."
+text = text.split()
+print(text)
+
+metin = "Los Angeles Miami Dallas"
+metin = metin.replace("Dallas", "Atlanta")
+print(metin)
+
+metin = "Los Angeles Miami Dallas Dallas"
+metin = metin.replace("Dallas", "Atlanta", 1)
+print(metin)
+
+metin = "Los Angeles Miami Dallas Dallas"
+print(metin.count("Dallas"))
+
+kelime = "Türkiye"
+print(kelime.startswith("T"))
+print(kelime.endswith("a"))
+
+kelime = "Programlama"
+print(kelime.find("r"))
+print(kelime.find("ml"))
+print(kelime.find("f"))
+
+x = "Baran"
+print(x.islower())
+print(x.istitle())
+x = "234"
+print(x.isnumeric())
+
+print(b"bytesverisi")
+
+text = b"Python Programming Language"
+text = text.split()
+print(text)
+
+metin = "İ ı Ş ş Ğ ğ Ö ö Ç ç Ü ü"
+print(metin)
+bytel = metin.encode("utf-8")
+print(bytel)
+bytel_2 = bytel.decode("utf-8")
+print(bytel_2)
