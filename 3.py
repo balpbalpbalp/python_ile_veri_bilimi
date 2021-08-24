@@ -1,3 +1,6 @@
+from functools import cache
+
+
 not_Eren = 100
 not_Ilhan = 99
 not_Ali = 98
@@ -173,4 +176,142 @@ print(alisveris1.union(alisveris2))
 print(alisveris1.intersection(alisveris2))
 
 print(alisveris1.difference(alisveris2))
+print(alisveris2.difference(alisveris1))
 
+hisse = ['ABCD', 'KLMN', 'ZTLM', 'XYZT']
+fiyat = [17.70, 9.59, 28.70, 7.05]
+
+hisseler = {
+    'ABCD': 17.70,
+    'KLMN': 9.59,
+    'ZTLM': 28.70,
+    'XYZT': 7.05
+}
+
+print(hisseler)
+
+print('XYZT' in hisseler)
+print('ABXY' in hisseler)
+
+print('UYXZ' not in hisseler)
+print('ABCD' not in hisseler)
+
+print(hisseler['ABCD'])
+print(hisseler['XYZT'])
+
+hisseler['DEFG'] = 18.75
+print(hisseler)
+
+# print(hisseler['UVYZ'])
+
+print(hisseler.get('UYVZ', 'Hisse yok.'))
+
+hisseler = {
+    'ABCD': 17.70,
+    'KLMN': 9.59,
+    'ZTLM': 28.70,
+    'XYZT': 7.05
+}
+
+yeni_hisse = {
+    'UVYZ': 32.25,
+    'BRSM': 3.90
+}
+
+hisseler.update(yeni_hisse)
+print(hisseler)
+
+hisseler = {
+    'ABCD': 17.70,
+    'KLMN': 9.59,
+    'ZTLM': 28.70,
+    'XYZT': 7.05
+}
+
+yeni_hisse = [('UVYZ', 32.25), ('BRSM', 3.90)]
+hisseler.update(yeni_hisse)
+print(hisseler)
+
+hisseler = {
+    'ABCD': 17.70,
+    'KLMN': 9.59,
+    'ZTLM': 28.70,
+    'XYZT': 7.05
+}
+
+del(hisseler['ZTLM'])
+print(hisseler)
+
+hisseler = {
+    'ABCD': 17.70,
+    'KLMN': 9.59,
+    'ZTLM': 28.70,
+    'XYZT': 7.05
+}
+
+hisseler.pop('ABCD')
+print(hisseler)
+
+print(hisseler.pop('ABXY', 'Hisse yok.'))
+
+hisseler = {
+    'ABCD': 17.70,
+    'KLMN': 9.59,
+    'ZTLM': 28.70,
+    'XYZT': 7.05
+}
+
+silinen = hisseler.pop('ABCD')
+print(silinen)
+
+hisseler = {
+    'ABCD': 17.70,
+    'KLMN': 9.59,
+    'ZTLM': 28.70,
+    'XYZT': 7.05,
+    'ABCD': 12.35
+}
+
+print(hisseler)
+
+hisseler = {
+    'ABCD': 17.70,
+    'KLMN': 9.59,
+    'ZTLM': 28.70,
+    'XYZT': 7.05
+}
+
+print(hisseler.keys())
+print(hisseler.values())
+print(hisseler.items())
+
+sektorel_hisseler = {
+    'banka': {'ABCD': 17.70, 'KLMN': 9.59},
+    'otomotiv': {'ZTLM': 9.59, 'XYZT': 7.05},
+    'teknoloji': {'ABCD'}
+}
+
+print(sektorel_hisseler['banka']['KLMN'])
+
+karışık_hisseler = {
+    'A': [1, 2, 3, 4],
+    'B': [3, 4, 5],
+    'C': {'ab': 34, 'cd': 36},
+    'D': {'xyzt'}
+}
+
+print(karışık_hisseler)
+
+# 1
+cities_in_Turkey = ['Ankara', 'Izmir', 'Istanbul', 'Adana', 'Bursa', 'Kars', 'Igdir']
+print(cities_in_Turkey)
+# 2
+cities_in_Turkey.extend(['Edirne', 'Aydin'])
+print(cities_in_Turkey)
+# 3
+print(cities_in_Turkey.index('Istanbul'))
+# 4
+cities_in_Turkey.remove('Istanbul')
+print(cities_in_Turkey)
+# 5
+print(sorted(cities_in_Turkey, reverse = False))
