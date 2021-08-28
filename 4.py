@@ -282,9 +282,45 @@ print(ülkeler_büyüktür_5)
 
 #4
 
-dersler = ["Matematik", "Fizik", "Kimya"]
-ogretmenler = ["Cahit Arf", "Mete Atatüre", "Aziz Sancar"]
-ders_ogretmen = zip(dersler, ogretmenler)
+# dersler = ["Matematik", "Fizik", "Kimya"]
+# ogretmenler = ["Cahit Arf", "Mete Atatüre", "Aziz Sancar"]
+# ders_ogretmen = zip(dersler, ogretmenler)
 
-for sira, cift in ders_ogretmen:
-    print("Ders No: {}\nDers Adı: {}\nDers Öğretmeni: {}".format(list(range(0, 3)),dersler,ogretmenler))
+# for sira, cift in zip(ders_ogretmen):
+#     print("Ders No: {}\nDers Adı: {}\nDers Öğretmeni: {}".format(list(range(0, 3)),dersler,ogretmenler))
+
+# Yapamadım.
+
+#5
+
+def try_x():
+    x = int(input("Enter a number: "))
+    if x < 0:
+        print(0)
+    else:
+        print(x)
+
+try_x()
+
+#6
+
+def calculate_Wage():
+    hourly_rate = float(input("Enter your hourly income: "))
+    hours_amount_week = int(input("Enter the amount of hour you plan to work: "))
+    if hours_amount_week < 40:
+        print("Invalid entry")
+    elif hours_amount_week == 40:
+        print(hourly_rate * hours_amount_week * 4)
+    else:
+        print(hourly_rate * 1.5 * hours_amount_week * 4)
+
+calculate_Wage()
+
+#7
+
+word = input("Enter a word: ")
+count = 0
+for i in word:
+    if i.isupper():
+        count += 1
+print(count)
